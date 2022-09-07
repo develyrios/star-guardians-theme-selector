@@ -1,0 +1,44 @@
+:root {
+    --akaliClaro: #5EC8E5;
+    --akaliEscuro: #3B18AB;
+    --kaisaClaro: #EC8187;
+    --kaisaEscuro: #EC2B58;
+    --sonaClaro: #91EDB5;
+    --sonaEscuro: #055162;
+}
+
+.bgAkaliClaro {
+    background-color: var(--akaliClaro);
+}
+
+.bgAkaliEscuro {
+    background-color: var(--akaliEscuro);
+}
+
+.bg-imgAkali {
+    background-image: url('../imgs/akali-bg.jpg');
+}
+
+.bgKaisaClaro {
+    background-color: var(--kaisaClaro);
+}
+
+.bgKaisaEscuro {
+    background-color: var(--kaisaEscuro);
+}
+
+.bg-imgKaisa {
+    background-image: url('../imgs/kaisa-bg.jpg');
+}
+
+.bgSonaClaro {
+    background-color: var(--sonaClaro);
+}
+
+.bgSonaEscuro {
+    background-color: var(--sonaEscuro);
+}
+
+.bg-imgSona {
+    background-image: url('../imgs/sona-bg.jpg');
+}
