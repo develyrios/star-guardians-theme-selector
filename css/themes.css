@@ -5,6 +5,8 @@
     --kaisaEscuro: #EC2B58;
     --sonaClaro: #91EDB5;
     --sonaEscuro: #055162;
+    --taliyahClaro: #EAD798;
+    --taliyahEscuro: #D95A79;
 }
 
 .bgAkaliClaro {
@@ -41,4 +43,16 @@
 
 .bg-imgSona {
     background-image: url('../imgs/sona-bg.jpg');
+}
+
+.bgTaliyahClaro {
+    background-color: var(--taliyahClaro);
+}
+
+.bgTaliyahEscuro {
+    background-color: var(--taliyahEscuro);
+}
+
+.bg-imgTaliyah {
+    background-image: url('../imgs/taliyah-bg.jpg');
 }
