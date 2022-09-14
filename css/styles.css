@@ -72,15 +72,9 @@ main {
 
 .vitrineDeTemas {
     display: grid;
-    grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     grid-gap: 2rem;
     max-width: 95vw;
-}
-
-@media (min-width: 1280px) {
-    .vitrineDeTemas {
-        grid-template: repeat(2, 1fr) / repeat(5, 1fr);
-    }
 }
 
 .card-ativo {
@@ -112,23 +106,7 @@ main {
     row-gap: 1rem;
 }
 
-.imgFamiliar-ativo {
-    border: 0.125rem solid var(--branco);
-    border-radius: 100%;
-    position: absolute;
-    margin-left: 5.5rem;
-    margin-top: 2.5rem;
-    width: 5rem;
-    display: none;
-}
-
-.imgFamiliar{
-    border: 0.125rem solid var(--branco);
-    border-radius: 100%;
-    position: absolute;
-    margin-left: 5.5rem;
-    margin-top: 2.5rem;
-    width: 5rem;
+.card-inativo {
     display: none;
 }
 
@@ -144,7 +122,8 @@ main {
     width: 12rem;
 }
 
-.titulo__section {
+.titulo__botao {
+    color: var(--branco);
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2rem;
