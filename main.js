@@ -30,7 +30,7 @@ function trocarTema(guardia) {
     fundo.classList.remove("bg-imgSona");
     fundo.classList.remove("bg-imgKaisa");
     fundo.classList.remove("bg-imgAkali");
-    fundo.classList.remove("bg-imgTalyah");
+    fundo.classList.remove("bg-imgTaliyah");
     fundo.classList.add(`bg-img${guardia}`);
 
     corClara.classList.remove("bgSonaClaro");
