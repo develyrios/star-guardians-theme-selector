@@ -42,6 +42,5 @@ function trocarTema(guardiaSelecionada) {
     }
 
     adicionarTema();
-    
     guardiaAtual = guardiaSelecionada;
 }
