@@ -40,8 +40,4 @@ function trocarTema(guardiaSelecionada) {
         cartaoAtivo.classList.add("card");
         cartaoClicado.classList.add("card-ativo");
     }
-
-    adicionarTema();
-    
-    guardiaAtual = guardiaSelecionada;
 }
