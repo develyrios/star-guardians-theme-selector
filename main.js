@@ -1,47 +1,47 @@
-const sona = document.getElementById("cardSona");
-sona.onclick = () => trocarTema("Sona");
+const elementoAkali = document.getElementById("cardAkali");
+elementoAkali.onclick = () => trocarTema("Akali");
 
-const kaisa = document.getElementById("cardKaisa");
-kaisa.onclick = () => trocarTema("Kaisa");
+const elementoKaisa = document.getElementById("cardKaisa");
+elementoKaisa.onclick = () => trocarTema("Kaisa");
 
-const taliyah = document.getElementById("cardTaliyah");
-taliyah.onclick = () => trocarTema("Taliyah");
+const elementoSona = document.getElementById("cardSona");
+elementoSona.onclick = () => trocarTema("Sona");
 
-const akali = document.getElementById("cardAkali");
-akali.onclick = () => trocarTema("Akali");
+const elementoTaliyah = document.getElementById("cardTaliyah");
+elementoTaliyah.onclick = () => trocarTema("Taliyah");
 
 const corEscura = document.querySelectorAll(".caixaDeTexto");
 const fundo = document.getElementById("caixaBody");
 const corClara = document.getElementById("body");
-const cartaoAtivo = document.querySelector(".card-ativo");
+let guardiaAtual = "Sona";
 
-function trocarTema(guardia) {
+function trocarTema(guardiaSelecionada) {
     let cartaoAtivo = document.querySelector(".card-ativo");
-    let cartaoClicado = document.getElementById(`card${guardia}`);
+    let cartaoClicado = document.getElementById(`card${guardiaSelecionada}`);
+
+    const removerTema = () => {
+        for (const elementos of corEscura) {
+            elementos.classList.remove(`bg${guardiaAtual}Escuro`);
+        }
+        fundo.classList.remove(`bg-img${guardiaAtual}`);
+        corClara.classList.remove(`bg${guardiaAtual}Claro`);
+        cartaoAtivo.classList.remove("card-ativo");
+        cartaoClicado.classList.remove("card");
+    }
     
-    for (const elementos of corEscura) {
-        elementos.classList.remove("bgSonaEscuro");
-        elementos.classList.remove("bgKaisaEscuro");
-        elementos.classList.remove("bgAkaliEscuro");
-        elementos.classList.remove("bgTaliyahEscuro");
-        elementos.classList.add(`bg${guardia}Escuro`);
+    removerTema();
+
+    const adicionarTema = () => {
+        for (const elementos of corEscura) {
+            elementos.classList.add(`bg${guardiaSelecionada}Escuro`);
+        }
+        fundo.classList.add(`bg-img${guardiaSelecionada}`);
+        corClara.classList.add(`bg${guardiaSelecionada}Claro`);
+        cartaoAtivo.classList.add("card");
+        cartaoClicado.classList.add("card-ativo");
     }
 
-    fundo.classList.remove("bg-imgSona");
-    fundo.classList.remove("bg-imgKaisa");
-    fundo.classList.remove("bg-imgAkali");
-    fundo.classList.remove("bg-imgTaliyah");
-    fundo.classList.add(`bg-img${guardia}`);
-
-    corClara.classList.remove("bgSonaClaro");
-    corClara.classList.remove("bgKaisaClaro");
-    corClara.classList.remove("bgAkaliClaro");
-    corClara.classList.remove("bgTaliyahClaro");
-    corClara.classList.add(`bg${guardia}Claro`);
-
-    cartaoAtivo.classList.remove("card-ativo");
-    cartaoAtivo.classList.add("card");
-
-    cartaoClicado.classList.remove("card");
-    cartaoClicado.classList.add("card-ativo");
+    adicionarTema();
+    
+    guardiaAtual = guardiaSelecionada;
 }
