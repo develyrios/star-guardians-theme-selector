@@ -8,4 +8,6 @@ Melhorias a serem implementadas:
 
 1 - Melhoria na responsividade
 
-2 - Reforma do layout
+2 - Refatoração e limpeza do código
+
+3 - Reforma do layout
